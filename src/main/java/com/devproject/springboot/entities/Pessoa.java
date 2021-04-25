@@ -1,11 +1,13 @@
 package com.devproject.springboot.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -21,6 +23,9 @@ public class Pessoa implements Serializable {
 	private Long Id;
 	private String cpf;
 	private String nomePessoa;
+	
+	@OneToMany
+	private List <Alimento> alimentos;
 	
 	public Pessoa() {
 		
@@ -49,6 +54,13 @@ public class Pessoa implements Serializable {
 	public void setNomePessoa(String nomePessoa) {
 		this.nomePessoa = nomePessoa;
 	}
+	public List <Alimento> getAlimentos() {
+		return alimentos;
+	}
+	public void setAlimentos(List <Alimento> alimentos) {
+		this.alimentos = alimentos;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
