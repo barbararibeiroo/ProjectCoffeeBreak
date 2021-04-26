@@ -9,11 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 
 
 @Entity
-@Table(name = "tb_alimento")
+@Table(name = "tb_alimento", uniqueConstraints={@UniqueConstraint(columnNames={"nomeAlimento"})})
 public class Alimento implements Serializable {
 
 	

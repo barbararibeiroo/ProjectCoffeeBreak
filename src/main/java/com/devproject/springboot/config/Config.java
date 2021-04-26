@@ -33,6 +33,7 @@ public class Config implements CommandLineRunner {
 		Pessoa p1 = new Pessoa(null, "120.445.387-99", "Bárbara Ribeiro");
 		Pessoa p2 = new Pessoa(null, "002.585.777-22", "Diego Ramon");
 		Pessoa p3 = new Pessoa(null, "455-500-277-00", "Lucas Maldonado");
+		Pessoa p4 = new Pessoa(null, "455-500-277-00", "Lucas Maldonado");
 		
 		
 		

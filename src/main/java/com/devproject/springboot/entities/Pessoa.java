@@ -10,17 +10,19 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 
 
 @Entity
-@Table(name = "tb_pessoa")
+@Table(name = "tb_pessoa", uniqueConstraints={@UniqueConstraint(columnNames={"cpf"})})
 public class Pessoa implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long Id;
 	private String cpf;
 	private String nomePessoa;
