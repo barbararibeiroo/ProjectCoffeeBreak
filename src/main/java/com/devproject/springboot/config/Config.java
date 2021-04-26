@@ -23,21 +23,23 @@ public class Config implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Alimento a1 = new Alimento(null, "Bolo de laranja");
-		Alimento a2 = new Alimento(null, "Presunto");
-		Alimento a3 = new Alimento(null, "Pão");
-		Alimento a4 = new Alimento(null, "Queijo");
+		//Alimento a1 = new Alimento(null, "Bolo de laranja");
+		//Alimento a2 = new Alimento(null, "Presunto");
+		//Alimento a3 = new Alimento(null, "Pão");
+		//Alimento a4 = new Alimento(null, "Queijo");
+		Alimento a5 = new Alimento(null, "Café");
 		
-		alimentoRepository.saveAll(Arrays.asList(a1,a2,a3,a4));
+		//alimentoRepository.saveAll(Arrays.asList(a1,a2,a3,a4));
+		alimentoRepository.saveAll(Arrays.asList(a5));
 		
-		Pessoa p1 = new Pessoa(null, "120.445.387-99", "Bárbara Ribeiro");
-		Pessoa p2 = new Pessoa(null, "002.585.777-22", "Diego Ramon");
-		Pessoa p3 = new Pessoa(null, "455-500-277-00", "Lucas Maldonado");
+		//Pessoa p1 = new Pessoa(null, "120.445.387-99", "Bárbara Ribeiro");
+		//Pessoa p2 = new Pessoa(null, "002.585.777-22", "Diego Ramon");
+		//Pessoa p3 = new Pessoa(null, "455-500-277-00", "Lucas Maldonado");
 		
 		
 		
 		
-		pessoaRepository.saveAll(Arrays.asList(p1,p2,p3));
+		//pessoaRepository.saveAll(Arrays.asList(p1,p2,p3));
 	}
 	
 	

@@ -9,28 +9,29 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devproject.springboot.entities.Pessoa;
-import com.devproject.springboot.service.PessoaService;
+import com.devproject.springboot.entities.Alimento;
+import com.devproject.springboot.service.AlimentoService;
 
 @RestController
-@RequestMapping("/pessoas")
-public class PessoaResource {
+@RequestMapping("/alimentos")
+public class AlimentoResource {
 
-	@Autowired
-	private PessoaService service;
 	
+		@Autowired
+		private AlimentoService alimentoService;
+		
 
-	@GetMapping
-	public ResponseEntity<List> findAll(){
-		List<Pessoa> list = service.findAll();
-		return ResponseEntity.ok().body(list);
-	}
-	//RECUPERADA SOMENTE DADOS DO DETERMINADO ID
+		@GetMapping
+		public ResponseEntity<List> findAll(){
+			List<Alimento> list = alimentoService.findAll();
+			return ResponseEntity.ok().body(list);
+		}
+			
 		@GetMapping(value = "/{id}")
-		public ResponseEntity<Pessoa> findById(@PathVariable Long id){
-			Pessoa obj = service.findById(id);
+		public ResponseEntity<Alimento> findById(@PathVariable Long id){
+			Alimento obj = alimentoService.findById(id);
 			return ResponseEntity.ok().body(obj);
-	
-	
-}
+		
+		
+	}
 }
